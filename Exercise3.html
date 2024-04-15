@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="styles.css">
+<head>
+
+<meta charset = "UTF-8">
+
+<meta name = "viewport" content = "width=device-width, initial-scale=1.0" >
+
+<title>Module 1 Exercise 3</title>
+
+<style>
+
+body { font-family: sans-serif; margin: 0; }
+.container { display: flex; min-height: 100vh; align-items: stretch; }
+.column { background: goldenrod; display: flex; flex-direction: column; justify-content: center; align-items: center; flex: 1; }
+
+</style>
+</head>
+
+<body>
+<div class="container">
+<div class="column" id="column1">
+
+<h1 id ="heading1">Hello</h1>
+<button class="button" onclick="myFunc()">Change Me</button>
+
+</div>
+<div class="column" id="column2">
+
+<h1 id="heading2">World</h1>
+<button class="button" onclick="myOtherFunc()">Change Me</button>
+
+</div>
+</div>
+<script>
+    let result = document.getElementById("column1");
+
+    function changeColor(color) {
+        document.getElementById("column1").style.background = color;
+    }
+    function myFunc() {
+            changeColor('purple');
+            result.innerHTML = "Background Color Changed!";
+    }
+</script>
+<script>
+    let result2 = document.getElementById("column2");
+    function colorChange(color) {
+        document.getElementById("column2").style.background = color;
+    }
+    function myOtherFunc() {
+        colorChange('blue');
+        result2.innerHTML = "Background Color Changed!";
+    }
+</script>
+</body>
+</html>
